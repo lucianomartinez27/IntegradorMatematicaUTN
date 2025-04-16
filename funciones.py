@@ -10,3 +10,8 @@ def multiplicar_binarios(binario1, binario2):
     for resultado in resultados:
         total = sumar_binarios(resultado, total)
     return total
+
+# division de binarios
+
+def dividir_binarios(dividendo, divisor)
+    
