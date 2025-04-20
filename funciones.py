@@ -62,3 +62,36 @@ def dividir():
     # Vuelvo a convertir el resultado de vuelta a binario
     resultado_bin = bin(resultado_dec)[2:] # Pongo el [2:] para que omita los dos primeros caracteres del prefijo
     print(f'La divison binaria entre {num_bin1} y {num_bin2} es: {resultado_bin}')
+
+
+
+
+
+#////////////////////////////////////////////////////////////////
+def convertir_binario():
+    while True:
+        opcion = input("Elija la opción D para Decimal a Binario, o B para Binario a Decimal: ")
+        if opcion.lower() == "d":
+            try:
+                numero = int(input("Ingresa un numero decimal: "))
+                binario = bin(numero)[2:]
+                print(f"La conversión a binario es {binario}")
+            except ValueError:
+                print("ERROR, ingrese un número decimal válido")
+
+        elif opcion.lower() == "b":
+            numero = input("Ingrese un número binario: ")
+            if all(char in "01" for char in numero):
+                decimal = int(numero, 2)
+                print(f"La conversión a decimal es: {decimal}")
+            else:
+                print("ERROR, eso no es un número binario")
+        else: 
+            print("ERROR, INGRESE UNA OPCION VALIDA")
+        continuar = input("si desea continuar presione 's', de no ser asi presione 'n': ")
+        if continuar.lower() == "s":
+            continue
+        elif continuar.lower() == "n":
+            break
+        else:
+            print("ERROR, INGRESE 's' PARA CONTINUAR O 'n' PARA SALIR.")
