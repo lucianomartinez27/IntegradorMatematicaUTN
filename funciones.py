@@ -11,32 +11,53 @@ def multiplicar_binarios(binario1, binario2):
         total = sumar_binarios(resultado, total)
     return total
 
-def alinear(divisor, dividento):
-    if divisor
+#////////////////////////////////////////////////////////////////
+
+def sumar_binarios():
+    a = input("Ingresá el primer número binario: ")
+    b = input("Ingresá el segundo número binario: ")
+    resultado = bin(int(a, 2) + int(b, 2))[2:]
+    print(f"La suma es: {resultado}")
+
+def restar_binarios():
+    a = input("Ingresá el primer número binario: ")
+    b = input("Ingresá el segundo número binario: ")
+    resultado = bin(int(a, 2) - int(b, 2))[2:]
+    print(f"La resta es: {resultado}")
+
+def operacionSumaResta():
+    a = input("Primer número binario: ")
+    b = input("Segundo número binario: ")
+
+    suma = bin(int(a, 2) + int(b, 2))[2:]
+    resta = bin(int(a, 2) - int(b, 2))[2:]
+
+    print(f"Suma: {suma}")
+    print(f"Resta: {resta}")
 
 
+operacionSumaResta()
 
-# Division de numeros binarios
+#////////////////////////////////////////////////////////////////
 
-# Pido dos numeros binarios como str
-num_bin1 = input('Ingrese un numero decimal: ')
-num_bin2 = input('Ingrese otro numero decimal: ')
+def dividir():
+    # division de numeros binarios
 
-# Convierto de binario a decimal
-num_dec1 = int(num_bin1, 2) # Pongo el ,2 para indicar que el numero que estamos pasando esta en base 2, osea binario.
-num_dec2 = int(num_bin2, 2)
+    # Pido dos numeros binarios como str
+    num_bin1 = input('Ingrese un numero decimal: ')
+    num_bin2 = input('Ingrese otro numero decimal: ')
 
-# Hago un if para evitar la división por cero
-if num_dec2 == 0:
-    print('No se puede dividir por 0, intente con otro  numero')
+    # Convierto de binario a decimal
+    num_dec1 = int(num_bin1, 2) # Pongo el ,2 para indicar que el numero que estamos pasando esta en base 2, osea binario.
+    num_dec2 = int(num_bin2, 2)
 
-# Hago la division de los numeros decimales
-resultado_dec = num_dec1 // num_dec2 
+    # Hago un if para evitar la división por cero
+    if num_dec2 == 0:
+        print('No se puede dividir por 0, intente con otro  numero')
 
-# Vuelvo a convertir el resultado de vuelta a binario
-resultado_bin = bin(resultado_dec)[2:] # Pongo el [2:] para que omita los dos primeros caracteres del prefijo
-print(f'La divison binaria entre {num_bin1} y {num_bin2} es: {resultado_bin}')
+    # Hago la division de los numeros decimales
+    resultado_dec = num_dec1 // num_dec2 
 
-
-
-
+    # Vuelvo a convertir el resultado de vuelta a binario
+    resultado_bin = bin(resultado_dec)[2:] # Pongo el [2:] para que omita los dos primeros caracteres del prefijo
+    print(f'La divison binaria entre {num_bin1} y {num_bin2} es: {resultado_bin}')
