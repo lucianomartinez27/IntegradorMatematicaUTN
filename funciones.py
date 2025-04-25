@@ -6,7 +6,11 @@ def sumar_binarios(a, b):
     return resultado
 
 def restar_binarios(a, b):
-    resultado = bin(int(a, 2) - int(b, 2))[2:]
+    diferencia = int(a, 2) - int(b, 2)
+    if diferencia >= 0:
+        resultado = bin(diferencia)[2:] 
+    else:
+        resultado = '-' + bin(abs(diferencia))[2:] 
     print(f"La resta es: {resultado}")
     return resultado
 
@@ -22,7 +26,7 @@ def operacionSumaResta():
     print(f"Resta: {resta}")
 
 
-#operacionSumaResta()
+operacionSumaResta()
 
 
 def multiplicar_binarios(binario1, binario2):
@@ -38,7 +42,6 @@ def multiplicar_binarios(binario1, binario2):
         total = sumar_binarios(resultado, total)
     return total
 
-multiplicar_binarios('101', '1')
 #////////////////////////////////////////////////////////////////
 
 def dividir():
