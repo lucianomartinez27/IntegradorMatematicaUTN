@@ -21,11 +21,6 @@ def operacionSumaResta():
     
     suma = sumar_binarios(a, b)
     resta = restar_binarios(a, b)
-
-    print(f"Suma: {suma}")
-    print(f"Resta: {resta}")
-
-
 operacionSumaResta()
 
 
