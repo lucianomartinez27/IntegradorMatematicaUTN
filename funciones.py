@@ -28,14 +28,14 @@ operacionSumaResta()
 def multiplicar_binarios(binario1, binario2):
     resultados = []
     contador = 0
-    for bit in reversed(binario2):
-        if bit == "1":
-            resultado = binario1 + "0" * contador
+    for bit in reversed(binario2): # Invertimos para comenzar desde el bit menos significativo
+        if bit == "1": # si el bit es 1, lo agregamos a la lista para ser sumado, sino lo descartamos
+            resultado = binario1 + ("0" * contador) # completemos con los ceros necesarios a la derecha
             resultados.append(resultado)
         contador += 1
-    total = "0"
+    total = "0" # inicializamos la suma en 0
     for resultado in resultados:
-        total = sumar_binarios(resultado, total)
+        total = sumar_binarios(resultado, total) # sumamos cada uno de los resultados
     return total
 
 #///////////////////////// DIVISION //////////////////////////////
